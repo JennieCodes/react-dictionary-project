@@ -13,46 +13,45 @@ export default function Dictionary(props) {
   }
 
   function search() {
-    // documentation: https://dictionaryapi.dev/e
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
     axios.get(apiUrl).then(handleDictionResponse);
+  }
 
-    function handleSubmit(event) {
-      event.preventDefault();
-      search();
-    }
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
 
-    function handleKeywordChange(event) {
-      setKeyword(event.target.value);
-    }
+  function handleKeywordChange(event) {
+    setKeyword(event.target.value);
+  }
 
-    function load() {
-      setLoaded(true);
-      search();
-    }
+  function load() {
+    setLoaded(true);
+    search();
+  }
 
-    if (loaded) {
-      return (
-        <div className="Dictionary">
-          <section>
-            <h1>What word do you want to look up?</h1>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                onChange={handleKeywordChange}
-                defaultValue={props.defaultKeyword}
-              />
-            </form>
-            <div className="hint">
-              suggested words: sunset, wine, yoga, plant...
-            </div>
-          </section>
-          <Results results={results} />
-        </div>
-      );
-    } else {
-      load();
-      return "Loading";
-    }
+  if (loaded) {
+    return (
+      <div className="Dictionary">
+        <section>
+          <h1>What word do you want to look up?</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              onChange={handleKeywordChange}
+              defaultValue={props.defaultKeyword}
+            />
+          </form>
+          <div className="hint">
+            suggested words: sunset, wine, yoga, plant...
+          </div>
+        </section>
+        <Results results={results} />
+      </div>
+    );
+  } else {
+    load();
+    return "Loading";
   }
 }
