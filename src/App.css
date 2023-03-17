@@ -1,11 +1,22 @@
 .App-header {
   text-align: center;
   margin: 30px 0;
-  font-size: 30px;
+  font-size: 40px;
+  color: white;
 }
 
 .App footer {
   text-align: center;
   margin: 30px 0;
   font-size: 12px;
+  color: white;
+}
+
+.App-logo {
+  width: 300px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #4f5d75;
 }

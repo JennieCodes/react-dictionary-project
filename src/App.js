@@ -1,11 +1,16 @@
 import "./App.css";
+import logo from "./logo-nobg.png";
 import Dictionary from "./Dictionary";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">Pocket Dictionary</header>
+        <header className="App-header">
+          <img src={logo} className="App-logo img-fluid" alt="logo" />
+          <br />
+          Pocket Dictionary
+        </header>
         <main>
           <Dictionary />
         </main>
@@ -14,5 +19,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
