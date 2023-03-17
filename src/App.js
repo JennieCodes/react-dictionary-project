@@ -16,7 +16,11 @@ export default function App() {
         </main>
         <footer className="App-footer">
           Coded by Jennie Chen and{" "}
-          <a href="https://github.com/JennieCodes/react-dictionary-project.git">
+          <a
+            href="https://github.com/JennieCodes/react-dictionary-project.git"
+            target="_blank"
+            rel="noreferrer"
+          >
             open-sourced
           </a>{" "}
           on Github

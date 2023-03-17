@@ -20,3 +20,11 @@
 body {
   background-color: #4f5d75;
 }
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: black;
+}
